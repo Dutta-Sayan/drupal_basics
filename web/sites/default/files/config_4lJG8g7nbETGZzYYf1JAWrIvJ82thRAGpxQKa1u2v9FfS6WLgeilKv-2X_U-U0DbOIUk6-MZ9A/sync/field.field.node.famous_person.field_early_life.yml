@@ -1,0 +1,22 @@
+uuid: d08e2d3d-f94a-4102-8afd-46af090eeb4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_early_life
+    - node.type.famous_person
+  module:
+    - text
+id: node.famous_person.field_early_life
+field_name: field_early_life
+entity_type: node
+bundle: famous_person
+label: 'Early Life'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,30 @@
+uuid: 399f83ae-520e-430a-bb6a-14cf9ea55e3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+id: node.field_news_image
+field_name: field_news_image
+entity_type: node
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: 582cec91-4e35-49fb-9d8d-28f22cd3e7a8
+    alt: News-image
+    title: 'Image reated to the news'
+    width: 612
+    height: 413
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

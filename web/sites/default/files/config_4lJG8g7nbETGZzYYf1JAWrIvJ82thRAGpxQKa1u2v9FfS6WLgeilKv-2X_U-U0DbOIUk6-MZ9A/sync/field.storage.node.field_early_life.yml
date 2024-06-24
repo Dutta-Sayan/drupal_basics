@@ -1,0 +1,19 @@
+uuid: f99f8689-6db1-4728-9724-15e012dce799
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_early_life
+field_name: field_early_life
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

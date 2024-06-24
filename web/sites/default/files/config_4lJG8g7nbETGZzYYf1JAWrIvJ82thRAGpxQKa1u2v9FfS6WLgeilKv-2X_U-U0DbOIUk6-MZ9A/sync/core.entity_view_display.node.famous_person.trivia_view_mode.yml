@@ -1,0 +1,118 @@
+uuid: 6bc7d25a-cee8-476c-9bef-4eba4ee1ad45
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.trivia_view_mode
+    - field.field.node.famous_person.body
+    - field.field.node.famous_person.field_born
+    - field.field.node.famous_person.field_death
+    - field.field.node.famous_person.field_died
+    - field.field.node.famous_person.field_early_life
+    - field.field.node.famous_person.field_file_upload
+    - field.field.node.famous_person.field_known_for
+    - field.field.node.famous_person.field_lifework
+    - field.field.node.famous_person.field_person_image
+    - field.field.node.famous_person.field_related_links
+    - field.field.node.famous_person.field_trivia
+    - node.type.famous_person
+  module:
+    - ds
+    - field_group
+    - file
+    - image
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_personal_data:
+      children: {  }
+      label: 'Personal Data'
+      parent_name: ''
+      region: hidden
+      weight: 21
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+  ds:
+    layout:
+      id: ds_3col
+      library: ds/ds_3col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          left: div
+          middle: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      left:
+        - field_person_image
+        - links
+        - field_lifework
+      middle:
+        - field_trivia
+      right:
+        - field_file_upload
+id: node.famous_person.trivia_view_mode
+targetEntityType: node
+bundle: famous_person
+mode: trivia_view_mode
+content:
+  field_file_upload:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 4
+    region: right
+  field_lifework:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: left
+  field_person_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: left
+  field_trivia:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: middle
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: left
+hidden:
+  body: true
+  field_born: true
+  field_death: true
+  field_died: true
+  field_early_life: true
+  field_known_for: true
+  field_related_links: true

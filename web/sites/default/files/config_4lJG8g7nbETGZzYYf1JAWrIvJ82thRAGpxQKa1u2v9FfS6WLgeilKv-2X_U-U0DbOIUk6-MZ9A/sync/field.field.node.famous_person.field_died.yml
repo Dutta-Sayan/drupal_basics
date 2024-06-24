@@ -1,0 +1,21 @@
+uuid: 7fe2fb92-cd83-4dcf-bb2a-5e53a60d1891
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_died
+    - node.type.famous_person
+  module:
+    - datetime
+id: node.famous_person.field_died
+field_name: field_died
+entity_type: node
+bundle: famous_person
+label: Died
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

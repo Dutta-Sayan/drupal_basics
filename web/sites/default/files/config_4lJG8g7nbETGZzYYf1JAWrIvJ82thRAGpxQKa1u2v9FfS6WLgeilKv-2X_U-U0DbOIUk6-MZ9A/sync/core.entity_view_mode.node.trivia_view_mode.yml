@@ -1,0 +1,11 @@
+uuid: 1216182f-3f7c-4e4f-9310-031582be76bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.trivia_view_mode
+label: 'Trivia View Mode'
+description: ''
+targetEntityType: node
+cache: true
