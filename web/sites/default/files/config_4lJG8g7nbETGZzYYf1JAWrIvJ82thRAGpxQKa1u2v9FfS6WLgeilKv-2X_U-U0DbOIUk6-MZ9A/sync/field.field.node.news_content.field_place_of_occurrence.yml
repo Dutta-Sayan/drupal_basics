@@ -1,0 +1,19 @@
+uuid: 45edb9b9-930a-4fe1-b6ea-a66e1953e051
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_place_of_occurrence
+    - node.type.news_content
+id: node.news_content.field_place_of_occurrence
+field_name: field_place_of_occurrence
+entity_type: node
+bundle: news_content
+label: 'Place of Occurrence'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+uuid: c983dd7d-add7-4563-93ee-229b23e8848a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.famous_person
+id: node.famous_person.title
+field_name: title
+entity_type: node
+bundle: famous_person
+label: 'Title (name)'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

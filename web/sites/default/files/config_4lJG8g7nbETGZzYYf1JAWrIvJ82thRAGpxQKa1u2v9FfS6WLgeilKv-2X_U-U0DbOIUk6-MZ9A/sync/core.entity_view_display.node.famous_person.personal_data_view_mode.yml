@@ -1,0 +1,124 @@
+uuid: f1f84b0e-fd68-4bb1-aed9-d4e2e99c6447
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.personal_data_view_mode
+    - field.field.node.famous_person.body
+    - field.field.node.famous_person.field_born
+    - field.field.node.famous_person.field_death
+    - field.field.node.famous_person.field_died
+    - field.field.node.famous_person.field_early_life
+    - field.field.node.famous_person.field_file_upload
+    - field.field.node.famous_person.field_known_for
+    - field.field.node.famous_person.field_lifework
+    - field.field.node.famous_person.field_person_image
+    - field.field.node.famous_person.field_related_links
+    - field.field.node.famous_person.field_trivia
+    - image.style.medium
+    - node.type.famous_person
+  module:
+    - datetime
+    - ds
+    - field_group
+    - image
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_personal_data:
+      children:
+        - field_born
+        - field_died
+        - field_known_for
+      label: 'Personal Data'
+      parent_name: ''
+      region: left
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      left:
+        - group_personal_data
+        - links
+        - field_born
+        - field_died
+        - field_known_for
+      right:
+        - field_person_image
+id: node.famous_person.personal_data_view_mode
+targetEntityType: node
+bundle: famous_person
+mode: personal_data_view_mode
+content:
+  field_born:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 4
+    region: left
+  field_died:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 5
+    region: left
+  field_known_for:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: left
+  field_person_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: right
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: left
+hidden:
+  body: true
+  field_death: true
+  field_early_life: true
+  field_file_upload: true
+  field_lifework: true
+  field_related_links: true
+  field_trivia: true
